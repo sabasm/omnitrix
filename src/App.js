@@ -16,9 +16,6 @@ export default class App extends Component {
         <OurProducts/>
         <Map/>
         <Contact/>
-
-        {/* <ContentComp title="Content2"></ContentComp>
-        <ContentComp title="Content3"></ContentComp> */}
       </div>
     );
   }

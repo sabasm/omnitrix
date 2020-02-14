@@ -2,36 +2,70 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="innerContainer">
+    <div className="innerContainer dirDown">
       <h2>Contacto</h2>
-      <div className="split products" style={{ padding: 0, width:"100%" }}>
-        {/* Dirección */}
-        <div className="contact dirDown" style={{ flex: 4 }}>
-          <span>Encuentranos en:</span>
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA/FBMVEUAAAD1hjT///8AqFn1hDD1gy30gCP0fh4AplQAokoAo071gioAp1YAoUgApFD0fyH09PT98+z99/Lj4+Pu7u7Z2dn9///l5eX9+vf1jD/0fBe5ubn85dfy8vLJycnQ0NCZmZn87eL718L6zrNWVlYYGBiMjIx4eHj5xqT4upL85tj3p3FRUVH2llL3oWivr6/2mVbu+fSgoKDe8uiBzqRsa2v3rX4nJyclr2j3qHb4soXC5tP5yKkAnDo3Njeuqayy5MmJhYfW8+RGRUWe2bohICB2dnZkwY05tXVTvYX5vplyx5mO0q4WEBNYwIhlY2S34sstJCji7OgxMTEOxC1ZAAASOElEQVR4nO1bCXvayLKFFpsEEjJLs5rNDt7BAmwT4wUDNsLgJZP//19uVbfULRxIcm8mmXnv6/PNJBiM1KdrO1WthEIKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCn8GX6/+6RX8FkzFq4ZjP/yDC/lNmNoT2+N45xgaefxnl/MbUBncDmr85YvjLuhj6GujVuvd/bOr+jvRGw1HlVDoop4t1InjkLsnOnt9XdGLf3phP8an7R99mb71Gr37RqiWL9h0MqmHav2lOxwR7bZ/YbvmwjVd+1+VdK7enh4O1t7Zv7fXjHC1j7E2va/XGqEH2necsTNb0VPHHdKROcw/TCxzPu8T15zkZ+br7u5QH/f+JINQqF2rV063ftp1xjMajJxafzB5gJxxel+5B2pXeWfS3317clauO8sdTMylduu4t+PsyFyQia7t5oBR/r6QXZhjMtdn7fuZvqz/1MI+fcdV/gtMswSxdVfrC9OcNfDVl+ndA/ifvbx9t8ndvTMbzJz7UGFl3d5OnmxXX7nmONvXE+6YzEwX/h/f9/UUdXTN+QJZZ2nOgOGq1343v8Pw7vSi3eh1K7V6PpvLZevdt18l+EA8HGz5BZpyU+5uKGQ7E3LgrMZkpaUStxMwkTk09X5tcvvq9O3KzHwnREsRx0j0Hy7sodkf3PahRFiOoyec09B+fqCvyEx3SW5uzirexWv5fDZbKOR284+hi9wu2QS7/UsEn8SFCpt/YToxV3NzchCyNfhzdAu2GVqLd4cOzZG9MoYEQm1EC/WBsVi41q1DDa3/JVQZm6vFcDfkWHqfDI2BXaBkpS+z4LGLualRr0jWJI/cgc1f0A/ApU03r+1ncMEuOp7jddad/vFun/39MDbfx+agHioM9cnDxBzSwthcZht9U8t9cXTDsefmLWTKpeEuV7MxJZbVP4X6rg2Hy1roL83sV9Da7oLMbheFrLPUtIHjiZsKWSPivShmdo5brb2b5+vLy6O9HfbRNgf7IaaM4FJPOfCXn8Eb2UKO7WcO36kMzD7VUs5L3tVHyOuvp3dzUd+fAMOQbel/QaFbGRqdmUv8Tg034oJ9zZw8hLLD29Eu6S8X8zFxJo5nL89He4Qe7+0dPh8dXX/eo4QeXnbOz0rhaCyeTsdisSQilu40f4HiJ+b4cyM1dKQND4jvLcQGMxbcxPvY1ceN2qs5bvxlGc7TSB8WLhywzn3fTNi7feIkUui17twd2mR4Oy7U2m/OfEDuQvl+nwZCyjMWsbt4pzyhN2VOJX4NDDuxaAQQXkc0/Yzf+a8c9bTixW4d77bStZSLd+XvvYlIKOLW3UGeuDVTCTdXG+jLPMbV28RIgTkGpjt2zUHWMTXLXBHiDNwhWIpMmKlsUu+1eRD4zlfMZHaazQxhJHNPGIW0lfZoXALD62R4I5A+yf88v0bOzyo9vP9M1zRrAC+ynD0hRYiAE3CXWIuS7NvEdClFg1Xe9dRsruuje+Lqt6+EDPRba2bn6Gg2dviyueUZJ/gTthFeVsEF0fmY95Xj8Xi402IfVzAMqzGPYQcYHm1hGC7f0J/20zcve005GYIlWdP0kSiIDWCYTibRXdLIsAFZphKqLc15jiwMczEbQlEAyTLBLzvEzhJODSy00zyutvYOj66vD6sZfLd3BQw76WSUOZ/vfZFovMQ45oFh0yMVOcc43MYwEoHrZX+G31PBD4gG/IRB6GgpYGiiX3EhhuWxxBcTg+jP1l/18UPoYDKYwZr6fW4n4tsJ/zs+uj7pnJWisVgaLJTGqIrFo4f4cRc+Ln2MK1xx+aTIL5KJeu+UipTuxbYwDMcwFL/+kN9BoKCCm3bx71dLS0AY4u28TYDbnvNFJQ8pydmOTaY9SQnCs8iS+fN15wy3lrbKzOIfOMQ7bCNocbNdkiWWIUkx7H8xQ2krvo1h5Own3PTNt19/gNc+fcTX77pmzYNhCK5L6We+sUkM8Lur0Ncs47fTOrxm2TwZi7EEGI2Ud5Dh5nXFLhnDnS2rjkQYRWHiONS9Zll+Ho0lozG5bVHYyx+odS/+6LtrmuhrjQr6qJUyBiPDeBdhGMLQ8SI+egJreGHhCvt7Vo7HeETJZZRhlbS6hUO5hTavljd/Go6eoaPSM5/hMeyh9NJop9XcaZ1FxX5VqV9FN4NLF8gQmp7SrBXL5ljqLWtBFgmNGdX7VbjrIb8TRj+5YgSPz+Ibwilcrn6HIdsgeuOtmuWaaDSZFNeJHeHnHY8EpDWaES4b6fB65fMPx2G7at8h2OD2G2sG5hVL8zJ7H0v9yLCWshqCwCZ+xDPn34faAm+IzVwDZlt6vC16Yhill+U0Zp9IuFQ663Q+X1+WpF3QA068H2M3QEhkpQgzMNw4HbjTdzquHufjgv20lJVYjDyGA0t/J/MEqxXCBfKiDEdK8HtZtEN5kwH5siDh+wzBRhic4tM4WJjs3bSqx82djNCfxY7vi5gg6aWXiZL4w7lgWGLlRqTaHzDkmXBlIj9DW/nikFAr4RJo4IZroqgi/C4S5hu5NZT4sppxYIbFvHT++fLyJOxvO1sVZiiskjeHR52MV2U6okLImA8nj6h0WfgRcliOSKumv+elTGfShcH8U/KDjkI3JmBHFpY58ev34He+lOIMz7ZYkGdbugPMjm5azWKR2+jQX2bskH39qAxuCqkXE6+NPr/jJ6syWNaP0+jngMvyHEYCDL+Xaa5YihlaYEB94PPL49ddC0yYSOl9EuzwG7AEb18xkLZWA39ZYONqixmp6tnI9zU0CxFRzRZdwZTgZ7JwvClrIJNtUpiWq9xL/dyTPKaku4UhK+wLIGi4E1Hv2xiXujEDEybmJOikoTbsnHdd3PV1tZgEZwxkHVwWRE+Z1UcmHoP77jH0OUA9QEfLy8iFQBWZGNMafRa3wtyJ5vZjNtncWg8/4V2hf9P0uWxjcljDZ4bmUDAh5pmAiz/JMoxrCoQ/GPUafLEosgOvJ/TSEwjPnKHMf3s8jCUfTBa4gwGGfpXHtCZclucwEsxi4E6NzQyxUDiQY4wV+QDXmgPLxAJf78sv7MvIY6mCiMwRjt/wdCisyrKt/2OSi5imqHhxHkvHAYZ5LM3CR2AL6I7PMLwmTPl2ieYqEoaftpx61Li1viXooJNCckU9E5TtU1mGUXrTjMikzCfxvs/rDL0fuctmRE2LooELRFgJHW+dIaQiWvQvHwXZ1hK7yRRjQC+UtutSVKPzBLfUGt4N3YGOb0g+7M5X6XeYDMUm8yXaF7mgM4Uz0rdYA0Sl0GLJoiG3CL9ewNQu1DhLxf7lof4HxAPLYTIHMPGx+SjgCtQZHaaMvk+Mzkb8xdzSHPhgtlYqAC+70u+wRkk5jEuuBRRBmCcAP/BYrujIbIi1oosW83UZeEQOM5/YNNR11C8dGJQf/UVEPAv4zYPTr4T3gH4HPhuaM/5ymHBHXrVfn0cWhN/xcrdmw3pw9MDLlJRA8EVhhDImUht9UrSbQBm0YVbmHsZQSG8MenEvZjQpARjhzZOaR7Shm9IYqcnSMlIWj0gHNOkmE7J07kU8q8JyX9EIheDogS9LLpjsidTHLAgJbD/QbmLy+ITK/tn7PouCk4CJifAAFniyt2JOu+U0B+vC0kos38cD17JQ18y9MNRSKW7bDyPliihh3FWkS6JZHrty9OBJ76r3G7Hiufig6k0Apx/aTbh6wGzVQJVnGldKb1SMIiWxPG1vJohXZH2ubljYV2jGkIfkANkyE378Zk/EHi93ATkMd71HzSPbA7SCT7i8k/F1Nw6xmAbBdvM6UE3aQZFUzgSq/Lr0DkewuT4WBf9oO0OmSt2ExgHCzYvIBepwZsKPUqEtpMRaufP23EbZJbpglot8wiAQfDeNRFEOQcv5EqgmJ56qE67XCTaQLOgD0vs4OD7Ancxt5Bfi5QLUJyeYGPkpdeirADtUa3zYE194cYZCo/Al2cHpErOLKODQxJ4HU8PuC467fA5eOaXXvmFY5MmJaWdNerMcJhQAG4ptY8iOXkbMiImhKBp9VOIaCvHG3YdIfIP0xyMlwspdRupSNpgIOi43g5zNSSEZR9lVY6nTswT3eXrpbxg2TwFRx4rN9ZowldLCUwtbYPsms4aidepDetUS7KDhE0ZqsJieyiydZNJb3pbNLUlgq/mqz+Rsjt74jsX633aoLmQbUKDFVkkWTE9cC9kW6Dq4gaXTokLe2gCz3mIJJku4Qnr3Ewl/Dly7Y+8EhCmKGi/94ZxhbRADSmyNM/djfz/Y4MX3U+YAZFoR8jlSqj6X5LiHz+LARXxS0I0GKy34gJxq4EK2NcBssD3WMQaFBSc8LBN4i7cKf08+6fJJUohX1+ousujQoPdEwlQqD94tCoWQRA8udOVAMRIPjAdj5zhPrUjJg/ooqJaeg7M3dKZtDTD2ug4yksJtZKTQhIlXeJ298960xUT5JcCwtdb/sHudVWmwywlIb+ayQT/12qnihlF2+jMSvHiCP/2aF8NuUXI6Ar7+T8wftrSHb76PyuYCCFqvQ3gHu4ouOjFbiEhVV9IqaS+zBA+FIvFOS3aq5aJM+FyHEOL7qUhM3zKMX7KhPzvoCoxivNKKc8f0Z4pHb2nWXJfOi98IEx/YPI1M8NGhT/DdTFkudozMa9tsB5hU9XPVvvRL1tLtBlsiRDQtCccD0juc5ISEVo8keWIKB7+NF+DjAFAEd5inYmyIni5DKi7G4+V0pHR23rmEXnTvea9VPd4psvOEwubnMtgZ72vCyyqIGeibBR0ZHucayztsCu7nKoicjFfSsXWoHKCfxj4sUjAMSO9wjGBDGPDT6Nl6ceG80+fHvljEmL95fj682Wu1qpi4W8eZIiHesbc4/6bbjw/ZPMbA0ucV+iUQhJy6sjTZMi4tNox6uurWLu7u2rLIM7drox/IRX9AOii90xgt2UA+DcdQiwbqODpAaS9wMn9ANhzl82UV60RiazHERIlDGoO3TH3XAAuCdy4SGpt0szctTlY8F0FFgbtmPctLjk2FNzJkYwAxp8CMh8WmKUyevmEnn95EP5ZOfm6xsM/7jyCd2pJGe5rzX+5m80+hbr1W6TXaBxf72x/1q3tOarBK8Q45FGIQXrne6QU3ofdS7OWRP+2rcq00RaV2uPHkgk+9/S6eVa3ump+mi5BryxBZJ5+vj25aGW6hhlzi13w+D0wq3S647WO313i4mF69bGX0EVnORkOJ7czNlGYsGFeQOJ5ZycTwCgndO2xCDBSrHX/8U/IaBJaRNx9ecOkd4xP9Mp+mFaSfxs4wE2V2MsWAJ5Laj886fxpowznYMPE+GmB3qC95utNE+YD2mBVGTKDxcvj8PBwXZwWojPli9lmO7JSTQTui56WxTc/E46Xzk+vn5yYb+eEsq8l2KX7pHfX6sQXI/b1Pl2Icjk3kY6BuS3h2Q4ZeHEJu9fMsJPXgwx7MhH6C3d/FdVYvS+V4GgBJvRwrnXVOLlkvLy3EhEcPnToNlZMdddfb/PJ2IV+rNLY/Ifi/gXWH7MgCKOkLX9YgQ14tsGy4/L3mh3TJZmViNvLIDgJosVltAarVJngefzzGzkPu8GzkaccsK3O80b8Hoz7tT++u/p7nDL8BJic6SKAJl35J5AxZqhlBHTEn/L3DdelRfqZrs/BQ2w5mIxlV+8xTiG3n8jWPBYqG486OLAq/Efzw1xmNJt4u59h5PjZTmuEujJSoGkF9jaMkbBR21/b9pZEnH2Hjkz+hg6f9u7WH1Hte7OX+bqfcgMb6inpciy9YR5zCppH1VDbo48AxaCQdbvFZ2QdcXbS7tXq91m08QJWaft3qeXU74LS/GQ8BfjXcUvSpmeENbhK8Kz7NkeLhWZI9DROLp0uHTFD+yvPmj9OLxq89F/rz+NTgz5nkG3zg+MACkQ9uDFb/QZnhfIlmmnuHIBJbOzzCvrHgvxifptNAkUUHetetFOSfAeOOVZ0E08if87DfA3auP5m77oxXD1bD9isBgQjv/YEU8RuRC3KRh8dXB91avpDN13q/8NDxvwN3AYr2/4F/vvK/wO+U7D/8Lzv+IK7alXqt98v/lEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQeH/Gf4Dmys0PC0gZT4AAAAASUVORK5CYII="
-            alt="El_Jardin_Cali_Logo"
-          ></img>
-          <span>Calle 27 #33 B - 09</span>
-          <span>Cali, Colombia</span>
-          <span>omnivita.ventas@gmail.com</span>
-          <span>57 312 8140509</span>
+      <div
+        className="split center products"
+        style={{ width: "80%", maxWidth:"820px", alignSelf: "center" }}
+      >
+        <div className="contact center" style={{ flex: 4 }}>
+          <ul>
+            <li>Encuentranos al interior de</li>
+            <a href="https://goo.gl/maps/YnYUjw9cd13AbRA86">
+              <li>
+                <img
+                  style={{
+                    height: "2.5rem",
+                    alignSelf: "center",
+                    justifySelf: "center"
+                  }}
+                  src="http://eljardin.com.co/contenido/uploads/2018/01/El-Jardin-Logo.png"
+                  alt="El_Jardin_Autoservicio"
+                />
+              </li>
+              <li>Calle27 #33 B - 09</li>
+              <li>Cali, Colombia</li>
+            </a>
+            <a href="mailto:omnivita.ventas@gmail.com">
+              <li className="center" style={{ justifyContent: "start" }}>
+                <img
+                  className="icon"
+                  src="https://www.pngitem.com/pimgs/m/516-5169649_palm-tree-leaf-png-transparent-png.png"
+                  alt="green_leaf"
+                />
+                omnivita.ventas@gmail.com
+              </li>
+            </a>
+            <a href="tel:+573128140509">
+              <li className="center" style={{ justifyContent: "start" }}>
+                <img
+                  className="icon"
+                  src="https://www.pngitem.com/pimgs/m/516-5169649_palm-tree-leaf-png-transparent-png.png"
+                  alt="green_leaf"
+                />
+                +57 312 8140509
+              </li>
+            </a>
+          </ul>
         </div>
-        {/* logo hojita */}
-        <div className="contact dirDown">
+
+        <div className="contact center" style={{ flex: 1 }}>
           <img
-            src="https://www.designfreelogoonline.com/wp-content/uploads/2015/04/00441-Free-Logo-Maker-leaf-LogoTemplate-01.png"
-            alt="leaf"
-          ></img>
-          {/* Horarios */}
-          <div className="contact dirDown" style={{ flex: 4 }}>
-            <span>Horario de Atención</span>
-            <span>Lunes a sábado:</span>
-            <span>09:00 - 12:00</span>
-            <span>15:00 - 20:00</span>
-            <span>Domingo</span>
-            <span>09:00 - 13:00</span>
-          </div>
+            id="logo"
+            src="https://www.pngitem.com/pimgs/m/516-5169649_palm-tree-leaf-png-transparent-png.png"
+            alt="green_leaf"
+          />
+        </div>
+
+        <div className="contact center" style={{ flex: 4 }}>
+          <ul>
+            <li>Horarios de atención</li>
+            <li>Lunes - Sábado</li>
+            <li>9:00 - 12:00</li>
+            <li>15:00 - 20:00</li>
+            <li>Domingo</li>
+            <li>9:00 - 13:00</li>
+          </ul>
         </div>
       </div>
     </div>

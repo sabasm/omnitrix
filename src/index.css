@@ -29,8 +29,9 @@
   align-items: center;
   justify-content: space-around;
   flex-flow: row wrap;
-  height: 3rem;
+  min-height: 3rem;
   width: 100%;
+  z-index: 5;
 }
 
 .nb-comp {
@@ -43,7 +44,6 @@
 .landing {
   height: calc(100vh - 3rem);
   width: 100%;
-  background-color: "red";
   display: flex;
   flex-flow: column wrap;
 }
@@ -81,20 +81,19 @@
   object-fit: cover;
   min-height: 200px;
   max-height: 512px;
-  min-width: 350px;
+  min-width: 320px;
 }
 .infoCenter div p {
   max-width: 300px;
 }
 .innerContainer {
   padding: 1rem 0;
-  background-color: brown;
   display: flex;
   width: 100%;
 }
 .innerContainer h2 {
   font-size: 1.2rem;
-  padding: 0 0 .3rem 1rem;
+  padding: 0 0 0.3rem 1rem;
   justify-self: center;
 }
 .products {
@@ -103,8 +102,8 @@
 .product {
   flex-wrap: nowrap;
   width: 20%;
-  min-width: 90px;
-  max-width: 150px;
+  min-width: 200px;
+  max-width: 250px;
   padding: 0.3rem 0.3rem;
 }
 .product img {
@@ -119,5 +118,46 @@
   background-color: peru;
 }
 .contact {
-  width: 30% ;
+  padding: 0.3rem;
+  justify-content: center;
+}
+
+.contact #logo {
+  width: 100%;
+  object-fit: contain;
+  max-width: 3rem;
+  min-width: 1.5rem;
+  max-height: 1.4rem;
+}
+
+.icon {
+  width: 100%;
+  object-fit: contain;
+  max-width: 3rem;
+  min-width: 1.5rem;
+  max-height: 1.4rem;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a:link,
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar #logo {
+    order:2;
+  }
+  .navbar #social {
+  order:3;
+  }
+  .navbar #links {
+order:1;
+  }
 }
